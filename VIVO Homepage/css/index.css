@@ -1,0 +1,536 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.r{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.c{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.fade{
+    opacity: 0;
+}
+.show{
+    opacity: 1;
+}
+
+.inTop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+body {
+    background-color: #f6f6f6;
+}
+#header {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #000;
+    background-color: #333333;
+}
+
+#header nav{
+    display: -webkit-flex;
+}
+
+#header #left_header{
+    display: flex;
+    margin-left: 40px;
+}
+
+#header #right_header{
+    margin-left: auto;
+    display: flex;
+    margin-right: 70px;
+}
+
+#header a{
+    color: #cccccc;
+    transition:color 0.3s linear
+}
+
+#header a:hover{
+    color: #7f7e7f;
+}
+
+#header #line{
+    width: 1px;
+    height: 60%;
+    background-color: #afccc2;
+    margin-top: 7px;
+}
+
+#nav {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #eeeeee;
+}
+
+#nav #logo{
+    width: 200px;
+    height: 50px;
+    margin-left: 100px;
+}
+
+#nav #series{
+    margin-left: auto;
+    margin-right: 150px;
+    display: flex;
+}
+
+#nav a{
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 20px;
+    color: #737373;
+    transition:color 0.3s linear
+}
+
+#nav a:hover{
+    color: #161414;
+}
+
+#actPage{
+    width: 100%;
+    height: 500px;
+}
+
+
+.carousel .item {
+    height: 500px;
+    background-color: #777;
+  }
+
+#actPage img{
+    height: 500px;
+}
+
+#star {
+    display: flex;
+    width: 70%;
+    height: 550px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+}
+
+#star img{
+    width: 200px;
+    height: 330px;
+
+}
+
+#star #starTitle{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+#star #img{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#star #img .StarimgAndWord{
+    display: flex;
+    width: 220px;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 4px solid #e0e0e0;
+    transition: all 0.3s;
+}
+
+#star #img .StarimgAndWord b{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#star #img .StarimgAndWord .grey{
+    margin-top: 5px;
+    color: thistle;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#star #img .StarimgAndWord .buy{
+    
+    color: #7fac9a;
+    font-size: 20;
+    font-weight: 600;
+}
+
+
+
+#star #img .StarimgAndWord:hover{
+    transform: translateY(-10px);
+    border-color: #7fac9a;
+}
+
+
+#alloc {
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#alloc #allocTitle{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+#alloc #allocItems{
+    width: 70%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,24%);
+    grid-template-rows: repeat(3,33%);
+    grid-column-gap: 12.5px;
+    grid-row-gap: 10px;
+}
+
+#alloc #c1-2r1-3{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+#alloc #protectTaoImg{
+    width: 100%;
+    height: 70%;
+}
+
+#alloc #protectTaoEx{
+    margin-top: 30px;
+    color: thistle;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#alloc #protectTaoName{
+    margin-top: 3px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #7e7e7e;
+}
+
+#alloc #protectTaoPrice{
+    margin-top: 3px;
+    color: #7fac9a;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#alloc #c2-3r1-2{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#c2-3r1-2 hr{
+    width: 70%;
+}
+
+.allocGoods {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    color: #949494;
+}
+
+#alloc .modules{
+    height: 100%;
+    width: 100%;
+    box-shadow:0px 0px 3px #949494;
+    border-bottom: 4px solid #e0e0e0;
+    transition: all 0.3s;
+}
+
+#alloc .modules:hover{
+    border-color: #7fac9a;
+    transform: translateY(-10px);
+}
+
+#alloc #c2-3r2-3{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#alloc #c3-5r1-2{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#alloc #VOOC{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#alloc #VOOC span{
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #949494;
+    font-weight: 500;
+}
+
+#alloc #VOOC div{
+    font-size: 25px;
+    color: #7e7e7e;
+    font-weight: 500;
+}
+
+
+#alloc #c1-3r3-4{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#alloc #USB{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#alloc #USB span{
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #949494;
+    font-weight: 500;
+}
+
+#alloc #USB div{
+    font-size: 25px;
+    color: #7e7e7e;
+    font-weight: 500;
+}
+
+#alloc #USB p{
+    margin-top: 3px;
+    color: #7fac9a;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+#alloc #c3-4r2-4{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#alloc #earphone{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#alloc #earphone span{
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #949494;
+    font-weight: 500;
+}
+
+#alloc #earphone div{
+    font-size: 25px;
+    color: #7e7e7e;
+    font-weight: 500;
+}
+
+#alloc #earphone p{
+    margin-top: 3px;
+    color: #7fac9a;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+#alloc #c4-5r2-3{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#alloc #minEarPhone{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#alloc #minEarPhone div{
+    font-size: 20px;
+    color: #7e7e7e;
+    font-weight: 500;
+}
+
+#alloc #minEarPhone p{
+    margin-top: 3px;
+    color: #7fac9a;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#alloc #c4-5r3-4{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#alloc #LE505{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#alloc #LE505 div{
+    font-size: 20px;
+    color: #7e7e7e;
+    font-weight: 500;
+}
+
+#alloc #LE505 p{
+    margin-top: 3px;
+    color: #7fac9a;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+
+#toTop{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
+
+#toTop img{
+    width: 80px;
+    height: 80px;
+}
+
+
+
+#footer {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    margin-top: 150px;
+}
+
+
+#footer > div{
+    height: 50%;
+    width: 150px;
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: all 0.3s;
+}
+
+#footer > div > div{
+    height: 100%;
+    width: 100%;
+}
+
+#footer .footerWord p{
+    font-size: 10px;
+    color: #000;
+    font-weight: 900;
+    margin: 0;
+}
+
+#footer .footerWord span{
+    font-size: 6px;
+    color: #7e7e7e;
+    font-weight: 500;
+}
+
+#footer > div:hover{
+    transform: translateY(-10px) scale(1.2);
+}
