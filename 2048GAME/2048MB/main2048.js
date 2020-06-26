@@ -176,13 +176,13 @@ $(document).keydown(function(event){
 document.addEventListener('touchstart',function(event){
     startx = event.touches[0].pageX;
     starty = event.touches[0].pageY;
-    event.preventdefault();
+    event.preventDefault();
 });
 
 document.addEventListener('touchend',function(event){
     endx = event.changedTouches[0].pageX;
     endy = event.changedTouches[0].pageY;
-    event.preventdefault();
+    event.preventDefault();
 
     var deltax = startx - endx;
     var deltay = starty - endy;
