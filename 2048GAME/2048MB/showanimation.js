@@ -10,6 +10,7 @@ function showNumberWithAnimation(i, j, randNumber) {
         top: getPostTop(i,j),
         left: getPostLeft(i,j)
     },50);
+    numberCell.css('fontSize',0.55 * cellSideLength + 'px')
 
 }
 

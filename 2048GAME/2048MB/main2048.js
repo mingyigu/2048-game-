@@ -67,12 +67,11 @@ function init(){
 function updateBoardView(){
     $(".number-cell").remove();
     
-    $(".number-cell").css("font-size", 0.57 * cellSideLength + 'px');
+
     for(var i = 0; i < 4; i++){
         for(var j = 0; j < 4; j++){
             $("#chessboard").append('<div class = "number-cell" id = "number-cell-' + i + "-" + j +'"></div>');
             var theNumberCell = $("#number-cell-" + i + "-" + j);
-        
             if(board[i][j] == 0){
                 theNumberCell.css('width', '0px');
                 theNumberCell.css('height', '0px');
@@ -94,7 +93,7 @@ function updateBoardView(){
                 else if(board[i][j] >= 128) {
                     theNumberCell.css('fontSize',0.5 * cellSideLength + 'px');
                 }
-                else if(board[i][j] >= 16) {
+                else {
                     theNumberCell.css('fontSize',0.55 * cellSideLength + 'px');
                 }
             }
