@@ -66,6 +66,8 @@ function init(){
 //更新棋盘数据显示
 function updateBoardView(){
     $(".number-cell").remove();
+    $(".number-cell").css("line-height",cellSideLength + 'px');
+    $(".number-cell").css("font-size", 0.6 * cellSideLength + 'px');
     for(var i = 0; i < 4; i++){
         for(var j = 0; j < 4; j++){
             $("#chessboard").append('<div class = "number-cell" id = "number-cell-' + i + "-" + j +'"></div>');
@@ -86,12 +88,20 @@ function updateBoardView(){
                 theNumberCell.css('background-color', getNumberBackgroundColor(board[i][j]));
                 theNumberCell.css('color', getNumberColor(board[i][j]));
                 theNumberCell.text(board[i][j]);
+                if(board[i][j] >= 1024) {
+                    theNumberCell.css('fontSize',0.42 * cellSideLength + 'px');
+                }
+                else if(board[i][j] >= 128) {
+                    theNumberCell.css('fontSize',0.5 * cellSideLength + 'px');
+                }
+                else if(board[i][j] >= 16) {
+                    theNumberCell.css('fontSize',0.55 * cellSideLength + 'px');
+                }
             }
         }
 
     }
-    $(".number-cell").css("line-height",cellSideLength + 'px');
-    $(".number-cell").css("font-size", 0.6 * cellSideLength + 'px');
+    
 
 
 }
@@ -182,7 +192,6 @@ document.addEventListener('touchstart',function(event){
 document.addEventListener('touchend',function(event){
     endx = event.changedTouches[0].pageX;
     endy = event.changedTouches[0].pageY;
-    event.preventDefault();
 
     var deltax = startx - endx;
     var deltay = starty - endy;
