@@ -66,8 +66,8 @@ function init(){
 //更新棋盘数据显示
 function updateBoardView(){
     $(".number-cell").remove();
-    $(".number-cell").css("line-height",cellSideLength + 'px');
-    $(".number-cell").css("font-size", 0.6 * cellSideLength + 'px');
+    
+    $(".number-cell").css("font-size", 0.57 * cellSideLength + 'px');
     for(var i = 0; i < 4; i++){
         for(var j = 0; j < 4; j++){
             $("#chessboard").append('<div class = "number-cell" id = "number-cell-' + i + "-" + j +'"></div>');
@@ -101,7 +101,7 @@ function updateBoardView(){
         }
 
     }
-    
+    $(".number-cell").css("line-height",cellSideLength + 'px');
 
 
 }
@@ -186,7 +186,6 @@ $(document).keydown(function(event){
 document.addEventListener('touchstart',function(event){
     startx = event.touches[0].pageX;
     starty = event.touches[0].pageY;
-    event.preventDefault();
 });
 
 document.addEventListener('touchend',function(event){
